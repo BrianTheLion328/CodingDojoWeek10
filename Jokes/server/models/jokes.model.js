@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
 const JokeSchema = new mongoose.Schema({
-    nameOfJoke: { type: String }
+    setup: String,
+    punchline: String,
+    createdAt: {type: Date, default: Date.now() },
+    updatedAt: {type: Date, default: Date.now() }
 });
 
 const Joke = mongoose.model('joke', JokeSchema);
