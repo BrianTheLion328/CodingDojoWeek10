@@ -5,4 +5,4 @@ mongoose.connect('mongodb://localhost/testdb', {
     useUnifiedTopology: true
 })
     .then(() => console.log('Established a connection! Success!'))
-    .catch(error => console.log('Something went wrong with the connection!', error))
+    .catch(error => console.log('Something went wrong!', error))
