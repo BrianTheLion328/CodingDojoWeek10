@@ -37,7 +37,7 @@ module.exports.updateSingleJoke = (req, res) => {
         { new: true, runValidators: true }
     )
         .then(updatedJoke => {
-            res.json( {updatedJoke} )
+            res.json( {updatedJokes: updatedJoke} )
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
@@ -47,7 +47,7 @@ module.exports.updateSingleJoke = (req, res) => {
 module.exports.deleteOneJoke = (req, res) => {
     Joke.deleteOne( {_id: req.params.id} )
         then(deletedJoke => {
-            res.json( {deletedJoke} )
+            res.json( {deletedJokes: deletedJoke} )
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
