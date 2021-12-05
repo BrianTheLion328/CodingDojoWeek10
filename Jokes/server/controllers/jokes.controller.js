@@ -47,7 +47,7 @@ module.exports.updateSingleJoke = (req, res) => {
 module.exports.deleteOneJoke = (req, res) => {
     Joke.deleteOne( {_id: req.params.id} )
         then(deletedJoke => {
-            res.json( {deletedJokes: deletedJoke} )
+            res.json( {deleted: deletedJoke} )
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
