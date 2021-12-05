@@ -50,6 +50,6 @@ module.exports.deleteOneJoke = (req, res) => {
             res.json( {deleted: deletedJoke} )
         })
         .catch((err) => {
-            res.json({ message: 'Something went wrong', error: err })
+            res.json({ message: 'Something went wrong. Please check for errors.', error: err })
         });
 }
