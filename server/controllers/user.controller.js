@@ -35,7 +35,7 @@ module.exports.updateExistingUser = (req, res) => {
         { new: true, runValidators: true }
     )
         .then(updatedUser => {
-            res.json({ user: updatedUser })
+            res.json({ updated: updatedUser })
         })
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
@@ -49,5 +49,3 @@ module.exports.deleteAnExistingUser = (req, res) => {
         .catch((err) => {
             res.json({ message: 'Something went wrong', error: err })
         });}
-
-        
